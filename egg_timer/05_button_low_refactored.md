@@ -79,8 +79,11 @@ func draw(w *app.Window) error {
 
         // this is sent when the application should re-render.
         case app.FrameEvent:
+          // change typ to e
+          gtx := app.NewContext(&ops, e)
             // ...
-
+          // change typ to e
+          e.Frame(gtx.Ops)
         // this is sent when the application is closed
         case app.DestroyEvent:
             return e.Err
