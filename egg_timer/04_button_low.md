@@ -29,6 +29,21 @@ We don't repeat the whole program here, but instead zoom in on the `system.Frame
 We start by removing a lot of the details to better see the structure:
 
 ```go
+import (
+
+	"os"
+
+	"gioui.org/app"
+	"gioui.org/unit"
+	"gioui.org/op"
+    // import the layout module
+	"gioui.org/layout"
+	"gioui.org/widget"
+	"gioui.org/widget/material"
+)
+```
+
+```go
 case system.FrameEvent:
 
     layout.Flex{
